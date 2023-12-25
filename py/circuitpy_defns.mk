@@ -351,6 +351,9 @@ endif
 ifeq ($(CIRCUITPY_STAGE),1)
 SRC_PATTERNS += _stage/%
 endif
+ifeq ($(CIRCUITPY_STICKS),1)
+SRC_PATTERNS += sticks/%
+endif
 ifeq ($(CIRCUITPY_STORAGE),1)
 SRC_PATTERNS += storage/%
 endif
@@ -512,6 +515,7 @@ SRC_COMMON_HAL_ALL = \
 	ssl/__init__.c \
 	ssl/SSLContext.c \
 	ssl/SSLSocket.c \
+	sticks/__init__.c \
 	supervisor/Runtime.c \
 	supervisor/__init__.c \
 	usb_host/__init__.c \

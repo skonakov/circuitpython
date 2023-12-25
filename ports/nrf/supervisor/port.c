@@ -310,6 +310,10 @@ uint32_t port_get_saved_word(void) {
     return _saved_word;
 }
 
+uint32_t port_get_ticks(void) {
+    return nrfx_rtc_counter_get(&rtc_instance);
+}
+
 uint64_t port_get_raw_ticks(uint8_t *subticks) {
     common_hal_mcu_disable_interrupts();
     uint32_t rtc = nrfx_rtc_counter_get(&rtc_instance);

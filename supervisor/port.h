@@ -72,6 +72,9 @@ uint32_t port_get_saved_word(void);
 // tick is 32 subticks (for a resolution of 1/32768 or 30.5ish microseconds.)
 uint64_t port_get_raw_ticks(uint8_t *subticks);
 
+// Get raw rtc ticks
+uint32_t port_get_ticks(void);
+
 // Enable 1/1024 second tick.
 void port_enable_tick(void);
 
